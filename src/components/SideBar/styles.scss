@@ -1,3 +1,4 @@
+// component styles
 .background {
   grid-area: menu;
   background: #f7f7f7;
@@ -6,10 +7,23 @@
 }
 
 .container {
-  width: 80%;
+  width: 78%;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
   transform: translateX(-400px);
   transition: transform 0.3s ease;
+}
+
+// specific styles
+.title {
+  padding: 12px 0 4px 0;
+  font-size: 1.6rem;
+  line-height: 32px;
+  color: #5d6d77;
 }
