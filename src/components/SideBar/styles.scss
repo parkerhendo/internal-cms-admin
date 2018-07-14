@@ -1,4 +1,15 @@
 .background {
   grid-area: menu;
   background: #f7f7f7;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.container {
+  width: 80%;
+}
+
+.hidden {
+  transform: translateX(-400px);
+  transition: transform 0.3s ease;
 }

@@ -9,7 +9,7 @@ export default class TopBar extends Component {
     return (
       <div className={styles.background}>
         <div className={styles.container}>
-          <Logo />
+          <Logo fill="#FFF" />
         </div>
       </div>
     );
