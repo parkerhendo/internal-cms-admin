@@ -1,0 +1,12 @@
+.grid {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 224px 1fr 1fr 1fr;
+  grid-template-rows: 64px auto;
+  grid-template-areas:
+    'header header header header'
+    'menu main main main'
+    'menu main main main'
+    'menu main main main';
+}
