@@ -4,26 +4,16 @@ import styles from './styles.scss';
 import TopBar from '../components/TopBar';
 import SideBar from '../components/SideBar';
 import ScrollContainer from '../components/ScrollContainer';
-import MenuItem from '../components/MenuItem';
+
+import Routes from '../routes';
+
 
 const App = () => (
   <div className={styles.grid}>
     <TopBar />
     <SideBar />
     <ScrollContainer>
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
+      <Routes />
     </ScrollContainer>
   </div>
 );

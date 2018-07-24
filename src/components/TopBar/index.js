@@ -4,14 +4,12 @@ import styles from './styles.scss';
 
 import Logo from './../Logo';
 
-export default class TopBar extends Component {
-  render() {
-    return (
-      <div className={styles.background}>
-        <div className={styles.container}>
-          <Logo fill="#FFF" />
-        </div>
-      </div>
-    );
-  }
-}
+export const TopBar = () => (
+  <div className={styles.background}>
+    <div className={styles.container}>
+      <Logo fill="#000" />
+    </div>
+  </div>
+);
+
+export default TopBar;

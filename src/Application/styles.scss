@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 224px 1fr 1fr 1fr;
+  grid-template-columns: 240px 1fr 1fr 1fr;
   grid-template-rows: 64px auto;
   grid-template-areas:
     'header header header header'
@@ -10,4 +10,10 @@
     'menu main main main'
     'menu main main main';
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 80px 1fr 1fr 1fr;
+  }
 }
