@@ -3,7 +3,7 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 240px 1fr 1fr 1fr;
-  grid-template-rows: 64px auto;
+  grid-template-rows: 72px 1fr 1fr 1fr;
   grid-template-areas:
     'header header header header'
     'menu main main main'

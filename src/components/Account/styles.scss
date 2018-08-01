@@ -1,6 +1,35 @@
 .accountContainer {
+  padding: 14px 24px;
+  border-left: 1px solid #e0e0e0;
+  width: 200px;
+  height: 100%;
+  // background: red;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.profilePicture {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  margin-right: 12px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .accountContainer {
+    padding: 0;
+    width: 64px;
+    justify-content: center;
+  }
+  .profilePicture {
+    margin: 0;
+  }
+  .name {
+    display: none;
+  }
 }
