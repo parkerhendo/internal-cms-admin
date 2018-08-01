@@ -1,0 +1,38 @@
+.QAItem {
+  margin: 1.5rem 0;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.answer {
+  max-width: 70ch;
+}
+
+.actionBtn {
+  margin: 0 16px 0;
+  font-weight: 400;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.editBtn {
+  color: lightblue;
+}
+
+.deleteBtn {
+  color: red;
+}
