@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/common.scss';
 import App from './Application';
 import { Router } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';

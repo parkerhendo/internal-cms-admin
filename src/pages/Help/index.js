@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './styles.scss';
 
-import QAItem from '../../components/QAItem';
+import { 
+  QAItem 
+} from '../../elements';
 
 const _ = require('lodash');
 const fetch = require('node-fetch');

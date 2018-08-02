@@ -2,9 +2,10 @@ import React from 'react';
 
 import styles from './styles.scss';
 
-import Account from '../Account';
-
-import Logo from './../Logo';
+import { 
+  Logo, 
+  Account 
+} from '../../elements';
 
 export const TopBar = () => (
   <div className={styles.background}>

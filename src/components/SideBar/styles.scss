@@ -1,7 +1,9 @@
+@import '../../styles/common.scss';
+
 .background {
   grid-area: menu;
-  height: 100%;
-  // background: red;
+  height: 100vw;
+  max-width: 240px;
   border-right: 1px solid #e0e0e0;
 }
 

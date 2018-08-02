@@ -1,12 +1,15 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import styles from './styles.scss';
 
-import TopBar from '../components/TopBar';
-import SideBar from '../components/SideBar';
-import ScrollContainer from '../components/ScrollContainer';
+import { 
+  TopBar,
+  SideBar, 
+  ScrollContainer
+} from '../components';
 
 import Routes from '../routes';
-
 
 const App = () => (
   <div className={styles.grid}>
@@ -18,4 +21,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default withRouter(App);
