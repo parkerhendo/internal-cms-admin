@@ -21,19 +21,21 @@ export default class Account extends Component {
     const json = await url.json();
     const data = json.results[0];
     this.setState({
-      name: data.name.first,
-      imageURL: data.picture.large,
-      role: 'admin',
+      user: {
+        name: data.name.first,
+        imageURL: data.picture.large,
+        role: 'admin',
+      }
     });
-    console.log(this.state.name.charAt(0));
   }
 
   render() {
-    const { name, imageURL} = this.state;
+    const { name, imageURL, role } = this.state.user;
+    const username = name.charAt(0).toUpperCase() + name.substr(1, name.length);
     return (
       <div className={styles.accountContainer}>
         <div className={styles.profilePicture} style={{backgroundImage: `url(${imageURL})`}} />
-        <h5 className={styles.name}>{name}</h5>
+        <h5 className={styles.name}>{username}</h5>
       </div>
     );
   }
