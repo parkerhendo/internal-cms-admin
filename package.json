@@ -60,8 +60,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "CHROMATIC_APP_CODE=l4e25t8596 chromatic test  --do-not-start"
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "collectCoverageFrom": [
