@@ -2,7 +2,6 @@
 
 .background {
   grid-area: menu;
-  height: 100vw;
   max-width: 240px;
   border-right: 1px solid #e0e0e0;
 }
@@ -10,12 +9,10 @@
 .container {
   width: 80%;
   margin: 0 auto;
-  // background: red;
   padding: 32px 0;
 }
 
 .navContainer {
-  // padding-top: 64px;
   width: 100%;
   margin: 0 auto;
 }

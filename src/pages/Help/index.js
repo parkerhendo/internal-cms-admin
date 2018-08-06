@@ -17,7 +17,7 @@ export default class Help extends React.Component {
     };
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     const url = await fetch(
       'https://gist.githubusercontent.com/parkerhendo/2dbbe7fb906528b8a3cc3fc8a2e68ea3/raw/e965aa991e30e3933823c82ff4ef1a4ff4d5b332/testfaq.json'
     );
@@ -27,7 +27,7 @@ export default class Help extends React.Component {
     });
   }
 
-  onChange = (event) => {
+  onChange = event => {
     let key = (event.target.name || '').toLowerCase();
     let value = event.target.value || '';
 
@@ -39,15 +39,15 @@ export default class Help extends React.Component {
   addItem = (question, answer) => {
     let { list } = this.state;
     let data = { id: list.length + 1, q: question, a: answer };
-    console.log(data);
+    // console.log(data);
     let newList = _.concat(list, data);
     this.setState({
       list: newList,
     });
   };
 
-  onSubmit = (e) => {
-    e.preventDefault();
+  onSubmit = event => {
+    event.preventDefault();
     if (this.state.question === '' || this.state.answer === '') {
       alert('Cannot submit empty forms');
     } else {
@@ -60,17 +60,23 @@ export default class Help extends React.Component {
     }
   };
 
-  onDelete = (e) => {
+  onEdit = event => {
     const { list } = this.state;
-    const currentItem = e.currentTarget.parentNode.parentNode.id;
+    const currentItem = event.currentTarget.parentNode.parentNode.id;
+    const targetQuestion =
+      event.currentTarget.parentNode.previousSibling.innerHTML;
+    console.log('Editing question: ' + targetQuestion);
+  };
 
-    const updatedList = list.filter(item => item.id != currentItem)
-    
+  onDelete = event => {
+    const { list } = this.state;
+    const currentItem = event.currentTarget.parentNode.parentNode.id;
+
+    const updatedList = list.filter(item => item.id != currentItem);
+
     this.setState({
       list: updatedList,
     });
-    
-    console.log(list);
   };
 
   render() {
@@ -122,21 +128,23 @@ export default class Help extends React.Component {
             title="Current FAQs"
             description="A list of the currently display Questions and Answers on our FAQ page. Edits and deletions will instantly apply."
           />
-          {
-            list.length >= 1 ? 
-              list.map((item, i) => {
-                return (
-                  <QAItem
-                    id={item.id}
-                    key={item.id}
-                    question={item.q}
-                    edit={this.onEdit}
-                    delete={this.onDelete}
-                  />
-                );
-              }) 
-            : <p className={styles.description} style={{marginTop: '1rem'}}>you do not have any published FAQs</p>
-          }
+          {list.length >= 1 ? (
+            list.map((item, i) => {
+              return (
+                <QAItem
+                  id={item.id}
+                  key={item.id}
+                  question={item.q}
+                  edit={this.onEdit}
+                  delete={this.onDelete}
+                />
+              );
+            })
+          ) : (
+            <p className={styles.description} style={{ marginTop: '1rem' }}>
+              you do not have any published FAQs
+            </p>
+          )}
         </section>
       </div>
     );
